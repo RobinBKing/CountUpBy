@@ -1,12 +1,12 @@
 describe('countTo', function() {
    it("is true if countTo is a number", function(){
-     expect(numberToCheck(50)).to.equal(true);
+     expect(numberCheck(50)).to.equal(true);
    });
    it("is false if countTo is not a number", function(){
-     expect(numberToCheck("this")).to.equal(false);
+     expect(numberCheck("this")).to.equal(false);
    });
    it("is true if countBy is a number", function(){
-     expect(numberByCheck(7)).to.equal(true);
+     expect(numberCheck(7)).to.equal(true);
    });
    it("is true if countTo is greater than or equal to countBy number", function(){
      expect(numberCompare(45, 8)).to.equal(true);
@@ -18,7 +18,9 @@ describe('countTo', function() {
      expect(numberCompare("this", "that")).to.equal(false);
    });
    it("returns integer of countTo divided by countBy", function() {
-     expect(numberDiv(22, 5)).to.equal(4);
+     expect(numberDivisible(22, 5)).to.equal(4);
    });
-
+   it("returns integer of countTo divided by countBy", function() {
+     expect(numberArray(22, 5)).to.eql([5,10,15,20]);
+   });
 });

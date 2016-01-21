@@ -1,9 +1,4 @@
-var numberToCheck = function(toNumber) {
-  return numberCheck(toNumber);
-};
-var numberByCheck = function(numberInput) {
-  return numberCheck(numberInput);
-};
+
 var numberCheck = function(byNumber) {
   return !isNaN(byNumber);
 };
@@ -15,13 +10,22 @@ var numberCompare = function(toNumber, byNumber) {
     return false;
   }
 };
-var numberDiv = function(toNumber, byNumber) {
+var numberDivisible = function(toNumber, byNumber) {
   if(numberCompare(toNumber, byNumber)){
     return Math.round((toNumber / byNumber));
   }
 };
+var numberArray = function(toNumber, byNumber) {
+  var divisibleNumber = numberDivisible(toNumber, byNumber);
+  var arrayNum = 0;
+  var divisibleArray = [];
+  for (var i = 0; i < divisibleNumber; i++){
+    arrayNum = (arrayNum + byNumber);
+    divisibleArray.push(arrayNum);
+  };
 
-
+  return divisibleArray;
+};
 
 
 
