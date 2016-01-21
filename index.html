@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.12.0.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Count Up By</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Count Up Generator</h1>
+
+      <form id="countUp">
+        <div class="form-group">
+          <label for="countTo">Enter a number to count to.</label>
+          <input id="countTo" type="text">
+        </div>
+        <div class="form-group">
+          <label for="countBy">Enter a number to count up by.</label>
+          <input id="countBy" type="text">
+        </div>
+
+        <button type="submit" class="btn">Count output!</button>
+      </form>
+
+      <div id="result">
+        <p>Your counting sequence is: <span class="triangleType"></span></p>
+      </div>
+    </div>
+  </body>
+</html>
