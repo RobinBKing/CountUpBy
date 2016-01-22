@@ -26,18 +26,25 @@ var numberArray = function(toNumber, byNumber) {
 
   return divisibleArray;
 };
+var addToList = function(toNumber, byNumber) {
+  var listArray = numberArray(toNumber, byNumber);
+  for (var i = 0; i < listArray.length; i++){
+    $("list#numberList").append('<li>'+listArray[i]+'</li>');
+  }
+}
 
+// interface
+$(document).ready(function() {
+  $("form#countUp").submit(function(event) {
+    $("ul").empty();
+    var countTo = parseInt($("input#countTo").val());
+    var countBy = parseInt($("input#countBy").val());
+    var listArray = numberArray(countTo, countBy);
+    for (var i = 0; i < listArray.length; i++){
+      $("ul.numberList").append("<li>"+listArray[i]+"</li>");
+    }
 
-
-
-
-//interface
-// $(document).ready(function() {
-//   $("form#triangle").submit(function(event) {
-//     var countTo = parseInt($("input#countTo").val());
-//     var countBy = parseInt($("input#countBy").val());
-//
-//     $("#result").show();
-//     event.preventDefault();
-//   });
-// });
+    $("#result").show();
+    event.preventDefault();
+  });
+});
